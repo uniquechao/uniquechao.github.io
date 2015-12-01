@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/selinux/" style="font-size: 10px;">selinux</a>
+						<a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/selinux/" style="font-size: 10px;">selinux</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
 					</div>
 				</section>
 				
@@ -195,6 +195,103 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-gen_pwd" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/01/gen_pwd/" class="article-date">
+  	<time datetime="2015-12-01T03:26:44.000Z" itemprop="datePublished">2015-12-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/01/gen_pwd/">密码生成器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><title> 密码生成器</title></p>
+<p><style><br>@import url(<a href="http://fonts.useso.com/css?family=Open+Sans:400,600,300">http://fonts.useso.com/css?family=Open+Sans:400,600,300</a>);<br>body,<br>html {<br>    background-image: url(‘<a href="http://cool.techbrood.com/uploads/150501/city-hazy-blurred-unsharp-night-rain-1920x1080.jpg">http://cool.techbrood.com/uploads/150501/city-hazy-blurred-unsharp-night-rain-1920x1080.jpg</a>‘);<br>    background-repeat: no-repeat;<br>    margin: 0 auto;<br>    height: 100%;<br>    overflow: hidden;<br>}</p>
+<p>#overlay {<br>    background: rgba(0, 29, 49, 0.8);<br>    height: 100%;<br>    overflow: hidden;<br>}</p>
+<p>#wrap {<br>    width: auto;<br>    height: 200px;<br>    margin-left: auto;<br>    margin-right: auto;<br>    margin-top: 100px;<br>}<br>hr {<br>    width: 35px;<br>    height: 2px;<br>    background-color: #8aaadf;<br>    border: none;<br>    margin-top: 10px;<br>}<br>h2 {<br>    color: white;<br>    font-family: ‘Karla’, sans-serif;<br>    text-transform: uppercase;<br>    text-align: center;<br>    font-size: 18px;<br>}<br>h1 {<br>    color: #3570b8;<br>    font-family: ‘Open Sans’, sans-serif;<br>    font-weight: 300;<br>    text-align: center;<br>    font-size: 25px;<br>    /<em> Boxes </em>/</p>
+<pre><code><span class="attribute">width</span>: <span class="string">400px;</span>
+<span class="attribute">margin-left</span>: <span class="string">auto;</span>
+<span class="attribute">margin-right</span>: <span class="string">auto;</span>
+</code></pre><p>}<br>input[type=text] {<br>    background-color: rgba(0, 0, 0, 0.4);<br>    width: 200px;<br>    height: 40px;<br>    margin-left: auto;<br>    margin-right: auto;<br>    display: block;<br>    font-size: 30px;<br>    color: rgba(250, 250, 250, 0.7);<br>    text-align: center;<br>    border-radius: 5px;<br>    border: none;<br>}<br>input[type=button] {<br>    width: 100px;<br>    height: 40px;<br>    background-color: rgba(220, 20, 60, 0.8);<br>    margin-top: 20px;<br>    margin-left: auto;<br>    margin-right: auto;<br>    display: block;<br>    border: none;<br>    border-radius: 5px;<br>    cursor: pointer;<br>}<br>input[type=text]:focus {<br>    box-shadow: 0px 0px 7px rgba(250, 250, 250, 0.3);<br>    outline: 0;<br>}<br>input[type=button]:focus {<br>    outline: 0;<br>}<br></style></p>
+<script>
+var chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '@', '#', '!', '.', '&', '$'];
+
+var exclure = ['azerty', 'qwerty']
+
+function generer() {
+    document.getElementById('add').value = main();
+}
+
+function randomize() {
+    var index = Math.floor((Math.random() * 68));
+    return index;
+}
+
+function generate() {
+    var word = chars[randomize()] + chars[randomize()] + chars[randomize()] + chars[randomize()] + chars[randomize()] + chars[randomize()] + chars[randomize()] + chars[randomize()];
+    return word;
+}
+
+function main() {
+    var result = "";
+    var trials = "";
+    var counter = 0;
+    do {
+        result = generate();
+        trials += result;
+    } while (exclure.indexOf(result) >= 0);
+    return trials;
+}
+</script>
+
+<div id="overlay"><br>    <div id="wrap"><br>        <h2>Password generator</h2><br>        <h1>Generate your password!</h1><br>        <input type="text" id="add" name="result" readonly value=""><br>        <input type="button" value="Generate!" onclick="generer()"><br>    </div><br></div>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/tools/">tools</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-selinux-note" class="article article-type-post" itemscope itemprop="blogPost">
   
