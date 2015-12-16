@@ -126,7 +126,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/selinux/" style="font-size: 10px;">selinux</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
+						<a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/selinux/" style="font-size: 10px;">selinux</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
 					</div>
 				</section>
 				
@@ -207,117 +207,6 @@
 	</div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-gitlab-rule" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/16/gitlab-rule/" class="article-date">
-  	<time datetime="2015-12-16T06:31:06.000Z" itemprop="datePublished">2015-12-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/16/gitlab-rule/">gitlab_rule</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="GitLab的使用规范">GitLab的使用规范</h1><h1 id="定位">定位</h1><p> 巴拉巴拉巴拉巴拉。。。。。</p>
-<h2 id="细则管理">细则管理</h2><h3 id="1_Member_的管理">1 Member 的管理</h3><p>下面操作需要找IT的管理员完成</p>
-<ul>
-<li>人员的添加</li>
-<li>人员的转移</li>
-<li>人员的离职</li>
-<li>Group的创建</li>
-</ul>
-<h3 id="2_Group_的管理">2 Group 的管理</h3><ul>
-<li>Group的粒度以实际一个独立完整的产品</li>
-<li>Group内的人员</li>
-<li>Group的Master 和Ower 应为产品实际的技术负责人担任。</li>
-</ul>
-<h3 id="3_Project_的管理">3 Project 的管理</h3><ul>
-<li>Project 应当属于一个Group</li>
-<li>个人实验性的Project可以放到个人域下，其他的属于产品的Project要放到Group下。</li>
-<li>Project是以一个独立的开发工程项目<ul>
-<li>不能提交 <code>.git</code>、<code>.svn</code>、<code>.idea</code> 等本地配置文件</li>
-<li>不能提交编译中间文件</li>
-</ul>
-</li>
-<li>在所有的Project中需要有以下文件。</li>
-<li><p>Readme 包括下面几项</p>
-<ul>
-<li>用于说明当前Project的功能、适用场景、属于的产品名</li>
-<li>实现的说明 或 Readmine的（wiki或issue）地址。</li>
-<li>配置运行方法</li>
-</ul>
-</li>
-<li><p>ChangeLog</p>
-<ul>
-<li>记录主要的更改点日期等</li>
-</ul>
-</li>
-</ul>
-<h3 id="4_分支的管理">4 分支的管理</h3><ul>
-<li>分支应该分为：Master 、Develop 、Release_xx 、Feature_xxx,Hotfix_xxx</li>
-<li>Master 分支<ul>
-<li>不能直接在Master分支上直接开发，下面几种情况可以除外<ul>
-<li>Project 开始</li>
-<li>二次开发的小任务</li>
-</ul>
-</li>
-<li>Master的合并</li>
-</ul>
-</li>
-<li>及时的删除临时本地和远程分支（Master 和Develop之外的）</li>
-</ul>
-<h3 id="5_Release_版本的管理">5 Release 版本的管理</h3><h3 id="6_commit_message">6 commit  message</h3><ul>
-<li>尽量简短,言简意赅 （ short (50 chars or less) summary  ）</li>
-<li>使用前缀说明更改的类型：Add 、 Fix、Modify<br>可以看这里：<a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target="_blank" rel="external">http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html</a></li>
-</ul>
-<h3 id="7_日常的操作">7 日常的操作</h3><ul>
-<li>每天及时的同步origin和本地</li>
-<li>保证Master 和Develop 是随时可用</li>
-</ul>
-<h3 id="8_参考">8 参考</h3><p>1 thoughtbot  git :  <a href="https://github.com/thoughtbot/guides/tree/master/protocol/git" target="_blank" rel="external">https://github.com/thoughtbot/guides/tree/master/protocol/git</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitLab/">GitLab</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
   
     <article id="post-gen_pwd" class="article article-type-post" itemscope itemprop="blogPost">
   
