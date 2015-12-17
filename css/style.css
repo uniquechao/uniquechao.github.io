@@ -205,7 +205,7 @@ a {
   height: 110px;
   position: absolute;
   width: 100%;
-  background: #4d4d4d;
+  background: #4d4dd3;
 }
 #container #mobile-nav .overlay.fixed {
   position: fixed;
@@ -288,7 +288,7 @@ a {
     height: 42px;
   }
   #container .overlay .slider-trigger:hover {
-    background: #4d4dd3;
+    background: #444;
   }
   #container .overlay .slider-trigger:before {
     color: #ddd;
